@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Urban Kings & Queens | Luxury Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="logo">Urban Kings <span>&</span> Queens</h1>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#">Book a Service</a>
+      <a href="#">Careers</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="hero-tag">Luxury Hub · Navrango</p>
+    <h2>Dress well. Look well. Feel like royalty.</h2>
+    <a href="#shop" class="btn-gold">Explore the collection</a>
+  </section>
+
+  <main id="shop" class="container">
+    <h2 class="section-title">Our Collection</h2>
+
+    <div class="filters">
+      <button class="filter-btn active" data-category="">All</button>
+      <button class="filter-btn" data-category="clothing">Clothing</button>
+      <button class="filter-btn" data-category="shoes">Shoes</button>
+      <button class="filter-btn" data-category="bags">Bags</button>
+      <button class="filter-btn" data-category="watches">Watches</button>
+      <button class="filter-btn" data-category="skincare">Skincare</button>
+      <button class="filter-btn" data-category="fragrance">Fragrance</button>
+    </div>
+
+    <p id="status" class="status"></p>
+    <div id="product-grid" class="product-grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Urban Kings & Queens Luxury Hub, Navrango</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
