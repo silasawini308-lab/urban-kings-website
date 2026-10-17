@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Careers | Urban Kings & Queens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">Urban Kings <span>&</span> Queens</a>
+    <nav>
+      <a href="index.html">Shop</a>
+      <a href="book-service.html">Book a Service</a>
+      <a href="login.html" id="nav-auth">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Careers</h2>
+    <p id="careers-status" class="status"></p>
+    <div id="jobs-list"></div>
+
+    <div id="apply-panel" class="booking-panel" style="display:none;">
+      <h3 id="apply-job-title"></h3>
+      <label>Link to your CV (Google Drive, Dropbox, etc.)</label>
+      <input type="url" id="cv-url-input" placeholder="https://...">
+      <p id="apply-msg" class="auth-error"></p>
+      <button id="submit-application-btn" class="btn-gold">Submit application</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Urban Kings & Queens Luxury Hub, Navrango</p>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script src="js/careers.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

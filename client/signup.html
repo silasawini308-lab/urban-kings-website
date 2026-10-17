@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up | Urban Kings & Queens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="auth-wrap">
+    <h2 class="auth-title">Create your account</h2>
+    <form id="signup-form">
+      <input type="text" id="fullName" placeholder="Full name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required minlength="8">
+      <p id="auth-error" class="auth-error"></p>
+      <button type="submit" class="btn-gold">Sign up</button>
+    </form>
+    <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>

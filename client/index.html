@@ -14,9 +14,11 @@
     <h1 class="logo">Urban Kings <span>&</span> Queens</h1>
     <nav>
       <a href="#shop">Shop</a>
-      <a href="#">Book a Service</a>
-      <a href="#">Careers</a>
-      <a href="#">Login</a>
+      <a href="book-service.html">Book a Service</a>
+      <a href="careers.html">Careers</a>
+      <a href="my-account.html">My Account</a>
+      <a href="login.html" id="nav-auth">Login</a>
+      <a href="cart.html" class="cart-link">Cart <span id="cart-count" class="cart-badge">0</span></a>
     </nav>
   </header>
 
@@ -26,27 +28,235 @@
     <a href="#shop" class="btn-gold">Explore the collection</a>
   </section>
 
-  <main id="shop" class="container">
-    <h2 class="section-title">Our Collection</h2>
+  <main id="shop" class="shop-page">
 
-    <div class="filters">
-      <button class="filter-btn active" data-category="">All</button>
-      <button class="filter-btn" data-category="clothing">Clothing</button>
-      <button class="filter-btn" data-category="shoes">Shoes</button>
-      <button class="filter-btn" data-category="bags">Bags</button>
-      <button class="filter-btn" data-category="watches">Watches</button>
-      <button class="filter-btn" data-category="skincare">Skincare</button>
-      <button class="filter-btn" data-category="fragrance">Fragrance</button>
+  <!-- Shop Introduction -->
+  <section class="shop-intro">
+    <p class="shop-eyebrow">LUXURY HUB • NAVRANGO</p>
+
+    <h2>Discover Your Style</h2>
+
+    <p class="shop-description">
+      Explore carefully selected pieces for Kings & Queens.
+    </p>
+
+    <!-- Main Search -->
+    <div class="shop-search">
+      <span class="search-icon">⌕</span>
+
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search products, categories..."
+        autocomplete="off"
+      >
+    </div>
+  </section>
+
+
+  <!-- Popular Categories -->
+  <section class="categories-section">
+
+    <div class="section-heading">
+      <div>
+        <p class="section-eyebrow">EXPLORE</p>
+        <h2>Popular Categories</h2>
+      </div>
     </div>
 
-    <p id="status" class="status"></p>
+    <div class="category-list">
+
+      <button class="category-item active" data-category="">
+        <span class="category-icon">✦</span>
+        <span>All</span>
+      </button>
+
+      <button class="category-item" data-category="clothing">
+        <span class="category-icon">♔</span>
+        <span>Clothing</span>
+      </button>
+
+      <button class="category-item" data-category="shoes">
+        <span class="category-icon">♙</span>
+        <span>Shoes</span>
+      </button>
+
+      <button class="category-item" data-category="bags">
+        <span class="category-icon">◇</span>
+        <span>Bags</span>
+      </button>
+
+      <button class="category-item" data-category="watches">
+        <span class="category-icon">◷</span>
+        <span>Watches</span>
+      </button>
+
+      <button class="category-item" data-category="skincare">
+        <span class="category-icon">✧</span>
+        <span>Skincare</span>
+      </button>
+
+      <button class="category-item" data-category="fragrance">
+        <span class="category-icon">♢</span>
+        <span>Fragrance</span>
+      </button>
+
+      <button class="category-item" data-category="hair">
+        <span class="category-icon">✿</span>
+        <span>Hair</span>
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- Product Catalogue -->
+  <section class="catalogue-section">
+
+    <div class="catalogue-header">
+
+      <div>
+        <p class="section-eyebrow">THE COLLECTION</p>
+
+        <h2>All Products</h2>
+
+        <p id="status" class="status"></p>
+      </div>
+
+      <div class="catalogue-controls">
+
+        <button id="filter-toggle" class="filter-control">
+          ☰ Filters
+        </button>
+
+        <select id="sort-select" class="sort-select">
+          <option value="recommended">Recommended</option>
+          <option value="newest">Newest</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+        </select>
+
+      </div>
+
+    </div>
+
+    <div id="filter-panel" class="filter-panel">
+
+  <div class="filter-panel-header">
+    <h3>Filter Products</h3>
+
+    <button
+      type="button"
+      id="filter-close"
+      class="filter-close"
+      aria-label="Close filters">
+      ×
+    </button>
+  </div>
+
+
+  <div class="filter-group">
+
+    <h4>Category</h4>
+
+    <select id="filter-category" class="filter-select">
+      <option value="">All Categories</option>
+      <option value="clothing">Clothing</option>
+      <option value="shoes">Shoes</option>
+      <option value="bags">Bags</option>
+      <option value="watches">Watches</option>
+      <option value="belts">Belts</option>
+      <option value="socks">Socks</option>
+      <option value="spectacles">Spectacles</option>
+      <option value="skincare">Skincare</option>
+      <option value="fragrance">Fragrance</option>
+      <option value="hair">Hair</option>
+    </select>
+
+  </div>
+
+
+  <div class="filter-group">
+
+    <h4>Price</h4>
+
+    <div class="price-inputs">
+
+      <input
+        type="number"
+        id="filter-min-price"
+        class="filter-input"
+        placeholder="Min"
+        min="0">
+
+      <span>—</span>
+
+      <input
+        type="number"
+        id="filter-max-price"
+        class="filter-input"
+        placeholder="Max"
+        min="0">
+
+    </div>
+
+  </div>
+
+
+  <div class="filter-group">
+
+    <label class="stock-filter">
+
+      <input
+        type="checkbox"
+        id="filter-in-stock">
+
+      <span>Show only products in stock</span>
+
+    </label>
+
+  </div>
+
+
+  <div class="filter-actions">
+
+    <button
+      type="button"
+      id="filter-clear"
+      class="filter-clear">
+      Clear
+    </button>
+
+    <button
+      type="button"
+      id="filter-apply"
+      class="filter-apply">
+      Apply Filters
+    </button>
+
+  </div>
+
+</div>
+
+
+    <!-- Products -->
     <div id="product-grid" class="product-grid"></div>
-  </main>
+
+
+    <!-- Pagination -->
+    <div id="pagination" class="pagination"></div>
+
+  </section>
+
+</main>
 
   <footer class="site-footer">
     <p>© Urban Kings & Queens Luxury Hub, Navrango</p>
   </footer>
 
+  <script src="js/cart.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/nav.js"></script>
 </body>
 </html>

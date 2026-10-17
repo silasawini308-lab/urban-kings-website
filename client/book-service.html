@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Service | Urban Kings & Queens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">Urban Kings <span>&</span> Queens</a>
+    <nav>
+      <a href="index.html">Shop</a>
+      <a href="cart.html" class="cart-link">Cart <span id="cart-count" class="cart-badge">0</span></a>
+      <a href="login.html" id="nav-auth">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Book a Service</h2>
+
+    <div class="filters">
+      <button class="filter-btn active" data-specialty="barbering">Barbering</button>
+      <button class="filter-btn" data-specialty="hairdressing">Hairdressing</button>
+      <button class="filter-btn" data-specialty="nails">Nails</button>
+      <button class="filter-btn" data-specialty="lashes">Lashes</button>
+      <button class="filter-btn" data-specialty="tailoring">Tailoring</button>
+    </div>
+
+    <p id="worker-status" class="status"></p>
+    <div id="worker-grid" class="product-grid"></div>
+
+    <div id="booking-panel" class="booking-panel" style="display:none;">
+      <h3 id="booking-worker-name"></h3>
+      <label>Location</label>
+      <div class="location-toggle">
+        <button type="button" class="loc-btn active" data-location="in_shop">In shop</button>
+        <button type="button" class="loc-btn" data-location="home">At my home</button>
+      </div>
+      <input type="text" id="booking-address" placeholder="Home address" style="display:none;">
+      <label>Date and time</label>
+      <input type="datetime-local" id="booking-datetime">
+      <p id="booking-msg" class="auth-error"></p>
+      <button id="confirm-booking-btn" class="btn-gold">Confirm booking</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Urban Kings & Queens Luxury Hub, Navrango</p>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script src="js/book-service.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

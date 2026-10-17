@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Deliveries | Urban Kings & Queens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">Urban Kings <span>&</span> Queens</a>
+    <nav>
+      <a href="login.html" id="nav-auth">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">My Deliveries</h2>
+    <p id="rider-status" class="status"></p>
+
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Order #</th><th>Customer</th><th>Address</th><th>Region</th><th>Fee</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="deliveries-list"></tbody>
+    </table>
+  </main>
+
+  <script src="js/rider-dashboard.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

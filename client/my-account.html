@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Account | Urban Kings & Queens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">Urban Kings <span>&</span> Queens</a>
+    <nav>
+      <a href="index.html">Shop</a>
+      <a href="cart.html" class="cart-link">Cart <span id="cart-count" class="cart-badge">0</span></a>
+      <a href="login.html" id="nav-auth">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">My Orders</h2>
+    <p id="orders-status" class="status"></p>
+    <table class="admin-table">
+      <thead>
+        <tr><th>Order #</th><th>Total</th><th>Delivery</th><th>Status</th><th>Date</th></tr>
+      </thead>
+      <tbody id="orders-list"></tbody>
+    </table>
+
+    <h2 class="section-title" style="margin-top:48px;">My Bookings</h2>
+    <p id="bookings-status" class="status"></p>
+    <table class="admin-table">
+      <thead>
+        <tr><th>Worker</th><th>Service</th><th>Location</th><th>Date &amp; time</th><th>Status</th></tr>
+      </thead>
+      <tbody id="bookings-list"></tbody>
+    </table>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Urban Kings & Queens Luxury Hub, Navrango</p>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script src="js/my-account.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

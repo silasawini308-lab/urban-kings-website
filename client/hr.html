@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HR — Careers | Urban Kings & Queens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">Urban Kings <span>&</span> Queens</a>
+    <nav>
+      <a href="admin.html">Products</a>
+      <a href="admin-orders.html">Orders</a>
+      <a href="hr.html">Careers</a>
+      <a href="login.html" id="nav-auth">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">HR — Job Postings</h2>
+    <p id="hr-status" class="status"></p>
+
+    <form id="job-form" class="admin-form">
+      <input type="text" id="job-title" placeholder="Job title" required>
+      <textarea id="job-description" placeholder="Job description" required></textarea>
+      <div class="admin-form-buttons">
+        <button type="submit" class="btn-gold">Post job</button>
+      </div>
+    </form>
+
+    <div id="jobs-container"></div>
+  </main>
+
+  <script src="js/hr.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@ function requireAuth(req, res, next) {
     }
     const token = authHeader.split(' ')[1];
     try {
-        const decoded = jwt.verify(token, Process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.user = decoded; // now every later route can read req.user.id and req.user.role
         next();
     } catch (err) {

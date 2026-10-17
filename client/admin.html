@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel | Urban Kings & Queens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">Urban Kings <span>&</span> Queens</a>
+    <nav>
+      <a href="index.html">Shop</a>
+      <a href="admin-orders.html">Orders</a>
+      <a href="admin-reports.html">Review Reports</a>
+      <a href="hr.html">Careers</a>
+      <a href="login.html" id="nav-auth">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Admin — Products</h2>
+    <p id="admin-status" class="status"></p>
+
+    <form id="product-form" class="admin-form">
+      <input type="hidden" id="product-id">
+      <input type="text" id="p-name" placeholder="Product name" required>
+      <select id="p-category" required>
+        <option value="">Select category</option>
+        <option value="clothing">Clothing</option>
+        <option value="shoes">Shoes</option>
+        <option value="bags">Bags</option>
+        <option value="watches">Watches</option>
+        <option value="belts">Belts</option>
+        <option value="socks">Socks</option>
+        <option value="spectacles">Spectacles</option>
+        <option value="skincare">Skincare</option>
+        <option value="fragrance">Fragrance</option>
+        <option value="hair">Hair</option>
+      </select>
+      <textarea id="p-description" placeholder="Description"></textarea>
+      <input type="number" id="p-price" placeholder="Price (GH₵)" step="0.01" min="0" required>
+      <input type="number" id="p-stock" placeholder="Stock quantity" min="0" required>
+      <input type="url" id="p-image" placeholder="Image URL (https://...)">
+      <div class="admin-form-buttons">
+        <button type="submit" class="btn-gold" id="form-submit-btn">Add product</button>
+        <button type="button" class="btn-cancel" id="cancel-edit-btn" style="display:none;">Cancel edit</button>
+      </div>
+    </form>
+
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="admin-product-list"></tbody>
+    </table>
+  </main>
+
+  <script src="js/admin.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

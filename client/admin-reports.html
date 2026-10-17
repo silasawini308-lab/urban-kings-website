@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Review Reports | Urban Kings & Queens</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      Urban Kings <span>&</span> Queens
+    </a>
+
+    <nav>
+      <a href="index.html">Shop</a>
+      <a href="admin.html">Products</a>
+      <a href="admin-orders.html">Orders</a>
+      <a href="admin-reports.html" aria-current="page">Review Reports</a>
+      <a href="hr.html">Careers</a>
+      <a href="login.html" id="nav-auth">Login</a>
+    </nav>
+  </header>
+
+  <main class="container review-reports-page">
+    <div class="review-reports-heading">
+      <p class="review-reports-eyebrow">ADMINISTRATION</p>
+      <h1 class="section-title">Customer Review Reports</h1>
+      <p class="review-reports-intro">
+        Review customer complaints, investigate reported reviews, and
+        keep the Urban Kings & Queens shopping experience trustworthy.
+      </p>
+    </div>
+
+    <p
+      id="admin-status"
+      class="review-reports-message"
+      role="status"
+      aria-live="polite"
+    >
+      Loading reports...
+    </p>
+
+    <section class="review-reports-toolbar" aria-label="Report controls">
+      <div class="filter-field">
+        <label for="report-status-filter">Filter by report status</label>
+
+        <select id="report-status-filter">
+          <option value="pending" selected>Pending</option>
+          <option value="reviewed">Reviewed</option>
+          <option value="resolved">Resolved</option>
+          <option value="dismissed">Dismissed</option>
+          <option value="all">All reports</option>
+        </select>
+      </div>
+
+      <button
+        type="button"
+        class="btn-gold"
+        id="refresh-reports-btn"
+      >
+        Refresh reports
+      </button>
+    </section>
+
+    <div class="review-reports-table-wrap">
+      <table class="review-reports-table">
+        <thead>
+          <tr>
+            <th>Report #</th>
+            <th>Product</th>
+            <th>Reported review</th>
+            <th>Reporter</th>
+            <th>Reason</th>
+            <th>Details</th>
+            <th>Date reported</th>
+            <th>Status &amp; actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="review-reports-list"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="js/admin-reports.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
